@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Spotify Mix | Discover New Playlists on Spotify</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="header">Spotify Mix</h1>
+        <div class="randomize-container">
+            <a class="randomize-button" href="#">New Playlist <i class="fas fa-random"></i></a>
+        </div>
+        <div class="box">
+            <div id="spotify"></div>
+        </div>
+        <div class="copyright">
+            Copyright © <span id="year"></span> Spotify Mix by <a href="https://www.jeffsasaki.com/">Jeff Sasaki</a>
+        </div>
+    </div>
+    <script>
+        const loadPlayer = playlistId => {
+            const player = document.createElement('iframe');
+            player.setAttribute('id', 'spotifyFrame')
+            player.setAttribute('src', `https://open.spotify.com/embed/playlist/${playlistId}`);
+            player.setAttribute('width', 375);
+            player.setAttribute('height', 500);
+            return player;
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            const iframe = loadPlayer('4iD8Xo3P2E0DifKiyhKwL0');
+            const spotify = document.getElementById('spotify');
+            spotify.appendChild(iframe);
+            document.getElementById('year').innerHTML = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

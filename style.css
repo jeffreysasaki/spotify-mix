@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+a,
+a:active,
+a:hover,
+a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+.header {
+    text-align: center;
+}
+.box {
+    display: block;
+}
+
+.randomize-container {
+    display: block;
+    width: 100%;
+    margin: 3rem auto 4rem;
+    text-align: center;
+}
+
+.randomize-button {
+    padding: 12px 24px;
+    background-color: #1DB954;
+    border-radius: 5rem;
+}
+
+.copyright {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
